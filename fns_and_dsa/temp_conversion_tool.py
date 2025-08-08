@@ -8,10 +8,7 @@ def convert_to_fahrenheit(celsius):
     print(f"{celsius}C is {round(fahrenheit,3)}F")
 temperature=float(input("Enter the temperature to convert: "))
 sign=input("Is this temperature in Celsius or Fahrenheit? (C/F): ").upper()
-<<<<<<< HEAD
-=======
 
->>>>>>> 9da902eb29e2c72ed087d0f1ce077749cb6fc415
 if temperature != "":
     if sign=='C':
         convert_to_fahrenheit(temperature)
@@ -21,8 +18,5 @@ if temperature != "":
         print("Invalid sign")
 else:
     print("Invalid temperature. Please enter a numeric value.")
-<<<<<<< HEAD
-=======
 
->>>>>>> 9da902eb29e2c72ed087d0f1ce077749cb6fc415
         

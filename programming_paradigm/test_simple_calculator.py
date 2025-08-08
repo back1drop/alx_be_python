@@ -4,7 +4,6 @@ from simple_calculator import SimpleCalculator
 class TestSimpleCalculator(unittest.TestCase):
 
     def setUp(self):
-        """Initialize a SimpleCalculator object before each test."""
         self.calc = SimpleCalculator()
 
     # Addition Tests

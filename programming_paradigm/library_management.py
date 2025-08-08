@@ -28,11 +28,9 @@ class Library:
         self._books = []
 
     def add_book(self, book):
-        """Add a Book instance to the library collection."""
         self._books.append(book)
 
     def check_out_book(self, title):
-        """Mark a book as checked out based on its title."""
         for book in self._books:
             if book.title == title and book.is_available():
                 book.check_out()
@@ -40,7 +38,6 @@ class Library:
         print(f"'{title}' is not available for checkout.")
 
     def return_book(self, title):
-        """Return a book by title."""
         for book in self._books:
             if book.title == title and not book.is_available():
                 book.return_book()
@@ -48,7 +45,6 @@ class Library:
         print(f"'{title}' is not currently checked out.")
 
     def list_available_books(self):
-        """Print all available books."""
         available_books = [book for book in self._books if book.is_available()]
         if not available_books:
             print("No books are currently available.")
