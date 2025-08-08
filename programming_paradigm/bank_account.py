@@ -1,20 +1,16 @@
 class BankAccount:
-    def __init__(self, account_balance=0):
-        self.account_balance = account_balance
+    def __init__(self, initial_balance=0):
+        self.__account_balance = initial_balance  # Encapsulated attribute
 
     def deposit(self, amount):
         if amount > 0:
-            self.account_balance += amount
-        else:
-            print("Deposit amount must be positive.")
+            self.__account_balance += amount
 
     def withdraw(self, amount):
-        if amount > self.account_balance:
-            print("Insufficient funds.")
-        elif amount <= 0:
-            print("Withdrawal amount must be positive.")
-        else:
-            self.account_balance -= amount
+        if 0 < amount <= self.__account_balance:
+            self.__account_balance -= amount
+            return True
+        return False
 
-    def display(self):
-        print(f"Current Balance: ${self.account_balance}")
+    def display_balance(self):
+        print(f"Current Balance: ${self.__account_balance:.2f}")
